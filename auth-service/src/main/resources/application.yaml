@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: auth-service
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  redis:
+    database: 0
+    port: 6379
+    host: localhost
+    password:
+server:
+  port: 9401
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone : http://${eureka.instance.hostname}:8761/eureka/
+
+

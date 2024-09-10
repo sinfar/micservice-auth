@@ -1,0 +1,18 @@
+server:
+  port: 9501
+spring:
+  application:
+    name: api-service
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone : http://${eureka.instance.hostname}:8761/eureka/
